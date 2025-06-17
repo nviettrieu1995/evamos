@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evamos Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class', // Enables class-based dark mode
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                light: '#60A5FA', // Example: blue-400
+                DEFAULT: '#3B82F6', // Example: blue-500 (Used as 'bg-primary')
+                dark: '#2563EB',  // Example: blue-600 (Used as 'hover:bg-primary-dark')
+              },
+              secondary: {
+                light: '#A3A3A3', // Example: neutral-400
+                DEFAULT: '#737373', // Example: neutral-500 (Used as 'bg-secondary')
+                dark: '#525252',  // Example: neutral-600 (Used as 'hover:bg-secondary-dark')
+              },
+              'text-light': '#1F2937', // Default text color in light mode (e.g., gray-800)
+              'text-dark': '#F3F4F6',  // Default text color in dark mode (e.g., gray-100)
+              'background-light': '#F9FAFB', // Default background in light mode (e.g., gray-50)
+              'background-dark': '#111827', // Default background in dark mode (e.g., gray-900)
+              // Specific component colors (already used in existing components)
+              // These might need to align with your 'primary' and 'secondary' or be distinct
+              'primary-dark': '#2563EB', // For focus rings etc.
+              'secondary-dark': '#525252', // For focus rings etc.
+            }
+          }
+        }
+      }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "@heroicons/react/": "https://esm.sh/@heroicons/react@^2.2.0/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.6.2",
+    "recharts": "https://esm.sh/recharts@^2.15.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.5.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
